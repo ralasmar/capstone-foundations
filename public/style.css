@@ -1,0 +1,59 @@
+.title{
+    text-align: center;
+    background-color: rgb(247, 244, 85);
+    padding: 15px;
+}
+
+.nav{
+    text-align: center;
+    font-size: 14px;
+}
+
+#title2{
+    background-color: rgb(93, 179, 171);
+}
+
+.review{
+    font-size: 14px;
+    display: inline-block;
+    padding: 10px;
+    margin: 15px;
+    
+}
+
+#rectangle{
+    height:400px;
+    width: 500px;
+    text-align: center;  
+}
+
+#popReviews{   
+    text-align: center;
+}
+
+.search{
+    text-align: center;
+}
+
+#submit{
+    background-color: rgb(93, 179, 171);
+    border-radius: 12px;
+    border-color: rgb(93, 179, 171);
+    margin-bottom: 30px;
+}
+
+.crumb{
+    font-size: 12px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.reviewImg{
+    height:550px;
+    margin-top: 45px
+}
+
+h4{
+    font-size: 12px;
+    text-align: left;
+}
