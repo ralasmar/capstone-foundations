@@ -12,6 +12,9 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
     }
 })
 
+const userDatabase = []
+let id = 0
+
 module.exports = {
     getArtists: (req,res) => {
         sequelize.query(`

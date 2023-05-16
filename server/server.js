@@ -13,7 +13,7 @@ app.use(express.json())
 app.post('/seed', seed)
 
 //artists
-app.get('./artists', getArtists)
+app.get('/artists', getArtists)
 
 //albums
 app.get('/albums', getAlbums)
