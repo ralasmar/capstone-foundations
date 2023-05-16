@@ -37,7 +37,7 @@
 
 #submit{
     background-color: rgb(93, 179, 171);
-    border-radius: 12px;
+    border-radius: 8px;
     border-color: rgb(93, 179, 171);
     margin-bottom: 30px;
 }
@@ -56,4 +56,32 @@
 h4{
     font-size: 12px;
     text-align: left;
+}
+
+#profileImg{
+    height: 200px;
+    width: 300px
+}
+
+#follow{
+    background-color: turquoise;
+    border-color: turquoise;
+    border-radius: 8px
+}
+
+.profile{
+    text-align: center;
+    float: left
+}
+
+#profileNav{
+    float: right;
+}
+
+#bio{
+    font-size: 12px;
+}
+
+#username{
+    margin-bottom: 10px;
 }
