@@ -27,7 +27,7 @@ const formHandler = (event) => {
     let body = document.querySelector('#review-body')
     
     let reviewObj = {
-        title: album.value,
+        album: album.value,
         artist: artist.value,
         imageURL: imageURL.value,
         body: body.value
@@ -41,6 +41,9 @@ function createReviewCard(review) {
 
     reviewCard.innerHTML = `<img alt = 'album cover' src=${review.imageURL} class = "review-album-cover"/>
     <p class = "review-album-title">${review.album}</p>
+    <p class = "review-artist-title">${review.artist}</p>
+    <p class = "review-body">${review.body}</p>
+    
     <div class = "btns-review">
         <button onclick="deleteReview(${review.id})
     </div>
