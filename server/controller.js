@@ -61,8 +61,12 @@ module.exports = {
 
     postReview: (req,res) => {
         id++
-        letnewReview = {...req.body, id:id}
+        let newReview = {...req.body, id:id}
         db.push(newReview)
-        res.status(200).send()
+        res.status(200).send(db)
+    },
+
+    getReviews: (req, res) => {
+        res.status(200).send(db)
     }
 }

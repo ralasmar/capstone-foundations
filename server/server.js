@@ -4,7 +4,7 @@ const cors = require("cors")
 const app = express();
 const {SERVER_PORT} = process.env
 const{seed} = require('./seed.js')
-const { getArtists, createAlbum, getAlbums, updateProfilePic, postReview } = require('./controller.js')
+const { getArtists, createAlbum, getAlbums, updateProfilePic, postReview, getReviews } = require('./controller.js')
 
 
 app.use(cors())
@@ -21,7 +21,8 @@ app.post('/albums', createAlbum)
 
 //crud functionality
 app.put("/api/profilePic")
-app.post('/api/review', postReview)
+app.post('/public/myProfile', postReview)
+app.get('/public/reviews', getReviews)
 
 
 
