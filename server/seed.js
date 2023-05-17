@@ -55,7 +55,6 @@ module.exports = {
         );
 
 
-
         INSERT INTO users(username, first_name, last_name)
         VALUES
             ('ralasmar', 'Rola', 'Alasmar);
@@ -82,7 +81,6 @@ module.exports = {
             ('Being Funny in a Foreign Language', 'https://f4.bcbits.com/img/a0736922991_10.jpg', 5);
 
        
-
 
         INSERT INTO reviews(album_id, user_id, body)
         VALUES(1, 1, 'This album rules');

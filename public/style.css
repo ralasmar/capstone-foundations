@@ -76,6 +76,7 @@ h4{
 
 #profileNav{
     float: right;
+    margin-left: 10px
 }
 
 #bio{
@@ -84,4 +85,36 @@ h4{
 
 #username{
     margin-bottom: 10px;
+}
+
+#edit{
+    background-color: turquoise;
+    border-color: turquoise;
+    border-radius: 8px
+}
+
+#newReview {
+    margin-top: 20px;
+    background-color:rgb(247, 244, 85); 
+    border-color: rgb(247, 244, 85);
+    border-radius: 8px
+}
+
+#reviewBody{
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+}
+
+#submitReview{
+    background-color: turquoise;
+    border-color: turquoise;
+    border-radius: 8px;
+}
+
+#cancelReview {
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 8px;
 }
