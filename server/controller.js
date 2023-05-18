@@ -13,7 +13,7 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 })
 
 const db = []
-let id = 0
+let id = db.length
 
 module.exports = {
     getArtists: (req,res) => {
@@ -67,6 +67,16 @@ module.exports = {
     },
 
     getReviews: (req, res) => {
+        res.status(200).send(db)
+    },
+
+    deleteReview : (req, res) => {
+        const {id} = req.params
+        for(let i=0; i<=db.length;i++){
+            if(db[i].id === +id){
+                db.splice(i,1);
+            }
+        }
         res.status(200).send(db)
     }
 }
