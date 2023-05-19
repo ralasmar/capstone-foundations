@@ -188,9 +188,14 @@ h4{
 }
 
 #dislike {
-    background: red;
-    border-color: red;
+    background: black;
+    border-color: black;
+    color:white;
     border-radius: 8px;
     float:right;
     width:60px
+}
+
+#likesCount{
+    font-size: 100px;
 }

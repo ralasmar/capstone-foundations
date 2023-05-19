@@ -4,6 +4,8 @@ const changePicBtn = document.querySelector('#edit')
 // const newReviewBtn = document.querySelector("#submitReview")
 const reviewSection = document.querySelector('.reviews')
 //const deleteBtn = document.querySelector('#delete-review')
+const likesText = document.querySelector('#like')
+const dislikesText = document.querySelector('#dislike')
 
 
 
@@ -24,6 +26,24 @@ const followUser = (evt) => {
     evt.preventDefault()
     alert(`You are now following this user`)
 };
+
+let likes = 0
+const likesCounter = (event) => {
+    event.preventDefault()
+    likes += 1
+    console.log(`likes: ${likes}`)
+    const likesCount = document.createElement('p')
+    likesCount.textContent = `<p id="likesCount">${likes}</p>`
+};
+
+let dislikes = 0
+const dislikesCounter = (event) => {
+    event.preventDefault()
+    dislikes += 1
+    console.log(`dislikes: ${dislikes}`)
+ 
+};
+
 
 ////review functions//////////////////////////////////////////////////
 const getReviews = () => axios.get('http://localhost:4000/public/reviews')
@@ -101,7 +121,9 @@ getReviews()
 //event listeners
 
 //followBtn.addEventListener('click', followUser)
-changePicBtn.addEventListener('click', updateProfilePic)
+//changePicBtn.addEventListener('click', updateProfilePic)
+likesText.addEventListener('click', likesCounter)
+dislikesText.addEventListener('click', dislikesCounter)
 
 //deleteBtn.addEventListener('click', deleteReview)
 //newReviewBtn.addEventListener('click', formHandler)
