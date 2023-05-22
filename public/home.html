@@ -9,17 +9,22 @@
 </head>
 <body>
     <section id="nav">
-        <h1 class="title">Website Name</h1>
+        <h1 class="title">SoundCritik</h1>
         <h2 class="nav">Create Account</h2>
         <h2 class="nav">  <a href="http://127.0.0.1:5500/public/myProfile.html">View My Profile</a></h2>
     </section>
     
+    <section id = "searchResults">
+
+    </section>
+
+
 
     <section id="main-page">
         <h1 class="title" id="title2">Popular Reviews</h1>
         
         <div class="search">
-            <input type="text" placeholder="Search For an Album">
+            <input id = "searchInput" type="text" placeholder="Search For an Album">
             <button id="submit">Submit</button>
         </div>
        
@@ -81,6 +86,8 @@
         
         
     </section>
+
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

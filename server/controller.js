@@ -79,4 +79,17 @@ module.exports = {
         }
         res.status(200).send(db)
     },
+    searchDatabase : (req, res) => {
+        const {input} = req.body
+        sequelize.query(`
+        SELECT *
+        FROM albums
+        WHERE album === input.value
+        `)
+        res.status(200).send(input)
+    }
+    // displayLikes : (req, res) => {
+    //     const {likes} = req.body
+    //     res.status(200).send('likes updated')
+    // }
 }

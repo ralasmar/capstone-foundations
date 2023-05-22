@@ -166,17 +166,29 @@ h4{
 }
 
 .otherProfileReviews{
-    margin-top: 40px;
     height: 300px;
     width: 400px;
     border-radius: 12px;
-    display: inline-block
+    display: flex;
+}
+
+#otherProfileReviews1{
+    margin: 40px;
+}
+
+#otherProfileReviews2 {
+    margin: 40px;
+}
+
+#otherProfileReviews3 {
+    margin: 40px;
 }
 
 #otherReviewImg{
     margin-top: 40px;
     height: 400px;
-    border-radius: 12px
+    border-radius: 12px;
+    
 }
 
 #like{
@@ -196,6 +208,41 @@ h4{
     width:60px
 }
 
+#like2 {
+    background: yellow;
+    border-color: yellow;
+    border-radius: 8px;
+    float: right;
+    width: 60px
+}
+
+#dislike2 {
+    background: black;
+    border-color: black;
+    color: white;
+    border-radius: 8px;
+    float: right;
+    width: 60px
+}
+
+#like3 {
+    background: yellow;
+    border-color: yellow;
+    border-radius: 8px;
+    float: right;
+    width: 60px
+}
+
+#dislike3 {
+    background: black;
+    border-color: black;
+    color: white;
+    border-radius: 8px;
+    float: right;
+    width: 60px
+}
+
 #likesCount{
     font-size: 100px;
 }
+
