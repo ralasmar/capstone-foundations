@@ -183,12 +183,12 @@ getReviews()
 
 
 //database search/////////////////////////////////////////////////////
-const searchDatabase = (album) => {
-    album = document.getElementById('searchInput')
+const searchDatabase = (input) => {
+    input = document.getElementById('searchInput')
     axios.get(`http://localhost:4000/search/${input.value}`, (req, res))
         .then(res => {
             const data = res.data
-             console.log('hi')
+             console.log(`${input.value}`)
         })
         .catch(err => console.log(err))
 }
