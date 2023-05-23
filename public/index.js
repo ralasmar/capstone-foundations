@@ -7,17 +7,10 @@
 
 const searchAlbum = document.querySelector('#submit')
 console.log(searchAlbum)
-window.onload = function(){
-    searchAlbum.addEventListener('click', searchDatabase)
-}
+
 
 
  
-
-  
-    
-
-
 
 // const getLikes = () => axios.get('http://localhost:4000/profile')
 //     .then(res => {
@@ -83,6 +76,7 @@ function createSearchCard(search){
     searchCard.innerHTML = `<img alt = 'album cover' src=${search.image} class = "search-album-cover"/>
     <p class = "search-album-title">${search.album}</p>
     <p class = "search-artist-title">${search.artist}</p>
+    <p class = "search-reviews">Username: ${search.reviews}</p>
     `
 
     searchResults.appendChild(searchCard)
@@ -97,26 +91,7 @@ function displaySearch(arr){
 //searchDatabase()
 
 
-
-
-//event listeners
-
-// using window.onload because this event listener executes before the DOM fully loads causing an error
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //deleteBtn.addEventListener('click', deleteReview)
 //newReviewBtn.addEventListener('click', formHandler)
+
+searchAlbum.addEventListener('click', searchDatabase)

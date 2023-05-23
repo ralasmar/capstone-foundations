@@ -1,6 +1,6 @@
 .title{
     text-align: center;
-    background-color: turquoise;
+    background-color: rgb(247, 244, 85);
     padding: 15px;
 }
 
@@ -157,9 +157,15 @@ h4{
     margin-left: 60px
 }
 
-.star{
-    font-size: 400%;
-    
+.stars{
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease
+}
+
+.stars span.active{
+    color: #ff9c1a
 }
 
 #delete-review{
@@ -249,5 +255,25 @@ h4{
 
 #likesCount{
     font-size: 100px;
+}
+
+.search-album-cover{
+    height: 400px;
+    margin-top: 45px
+}
+
+.search-album-title{
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 0px
+}
+
+.search-album-artist{
+    margin-top: 0px
+}
+
+.search-card{
+    display: inline-block;
+    
 }
 

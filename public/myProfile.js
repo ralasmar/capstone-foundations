@@ -29,6 +29,7 @@ const deleteReview = (id) => {
         .then(res => {
             const data = res.data
             alert('Review Deleted')
+            location.reload()
             console.log(data)
         })
         .catch(err => console.log(err))
@@ -42,6 +43,7 @@ function createReviewCard(review) {
     <p class = "review-album-title">${review.album}</p>
     <p class = "review-artist-title">${review.artist}</p>
     <p class = "new-review-body">${review.body}</p>
+    <p class = "active-stars">${review.stars}</p>
     
      <button id="delete-review" onclick="deleteReview(${review.id})">Delete</button>
     `

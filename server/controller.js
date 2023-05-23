@@ -89,10 +89,13 @@ module.exports = {
             albums.name AS album,
             albums.album_img AS image,
             albums.artist_id,
-            artists.name AS artist
+            artists.name AS artist,
+            reviews.body AS reviews
         FROM albums
         JOIN artists
         ON albums.artist_id = artists.artist_id
+        JOIN reviews
+        ON reviews.album_id = albums.album_id
         WHERE albums.name = '${albums}'
         `)
         .then(resdb => {

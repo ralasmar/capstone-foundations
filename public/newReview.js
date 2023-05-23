@@ -18,7 +18,6 @@ const postReview = (body) => axios.post('http://localhost:4000/public/myProfile'
     .catch(err => console.log(err))
 
 
-
 const formHandler = (event) => {
     event.preventDefault()
     console.log('review clicked')
@@ -26,12 +25,15 @@ const formHandler = (event) => {
     let artist = document.querySelector('#review-artist-title')
     let imageURL = document.querySelector("#review-album-cover")
     let body = document.querySelector('#new-review-body')
+    let starRating = document.querySelectorAll('.stars')
+    
     
     let reviewObj = {
         album: album.value,
         artist: artist.value,
         imageURL: imageURL.value,
         body: body.value,
+        starRating: starRating,
     }
     postReview(reviewObj)
 
@@ -55,5 +57,22 @@ function displayReviews(arr){
         createReviewCard(review)
     })
 };
+
+//star rating feature------------------------------------------------
+const stars = document.querySelectorAll(".stars span");
+
+//loop through the stars nodelist
+stars.forEach((star, index1) => {
+    star.addEventListener("click", () => {
+     //loop through nodelist again
+        stars.forEach((star, index2) => {
+            //add the "active" class to the clicked star and any stars with a lower index
+            //remove the "active" class from any stars with a higher index
+            index1 >= index2 ? star.classList.add("active") : star.classList.remove("active")
+        })
+    })
+})
+
+
 
 newReviewBtn.addEventListener('click', formHandler)
