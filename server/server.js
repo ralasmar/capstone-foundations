@@ -4,7 +4,7 @@ const cors = require("cors")
 const app = express();
 const {SERVER_PORT} = process.env
 const{seed} = require('./seed.js')
-const { getArtists, createAlbum, getAlbums, updateProfilePic, postReview, getReviews, deleteReview, searchDatabase } = require('./controller.js')
+const { getArtists, createAlbum, getAlbums, updateProfilePic, postReview, getReviews, deleteReview, searchDatabase, postSearch  } = require('./controller.js')
 
 
 app.use(cors())
@@ -25,6 +25,7 @@ app.post('/public/myProfile', postReview)
 app.get('/public/reviews', getReviews)
 app.delete('/public/myProfile/:id', deleteReview)
 app.get('/public/search', searchDatabase)
+app.post('/public/search', postSearch)
 //app.put('/public/profile', displayLikes)
 //app.get('/public/profile', likesCounter)
 //app.get('/public/profile', dislikesCounter)

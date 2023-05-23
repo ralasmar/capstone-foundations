@@ -46,16 +46,17 @@ module.exports = {
             albums.name AS album,
             albums.album_img AS image,
             albums.artist_id,
-            arist.name AS artist
+            artists.name AS artist
         FROM albums
         JOIN artists
         ON albums.artist_id = artists.artist_id
+
         `)
     },
 
     /////////////////CRUD FUNCTIONS/////////////////////////////////////
     updateProfilePic: (req, res) => {
-        let {image} = req.body
+        let {photo} = req.body
         res.status(200).send('photo updated')
     },
 
@@ -80,13 +81,29 @@ module.exports = {
         res.status(200).send(db)
     },
     searchDatabase : (req, res) => {
-        const {input} = req.body
+        const {albums} = req.query
+         console.log(albums)
         sequelize.query(`
-        SELECT *
+        SELECT 
+            albums.album_id,
+            albums.name AS album,
+            albums.album_img AS image,
+            albums.artist_id,
+            artists.name AS artist
         FROM albums
-        WHERE album === input.value
+        JOIN artists
+        ON albums.artist_id = artists.artist_id
+        WHERE albums.name = '${albums}'
         `)
-        res.status(200).send(input)
+        .then(resdb => {
+            res.status(200).send(resdb[0])
+        })
+        .catch(err => console.log(err))
+    },
+    postSearch : (req, res) => {
+        const {search} = req.body
+        db.push(search)
+        res.status(200).send(db)
     }
     // displayLikes : (req, res) => {
     //     const {likes} = req.body

@@ -128,28 +128,33 @@ h4{
 .reviews{
     height: 300px;
     width: 300 px;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap
 }
 
 .review-album-cover{
     margin-top: 40px; 
     height: 400px;
-    border-radius: 12px   
+    border-radius: 12px;
+    margin-left: 60px   
 }
 
 .review-album-title{
     justify-items: center;
     font-weight: bolder;
     font-size: 20px;
-    margin-bottom: 0px
+    margin-bottom: 0px;
+    margin-left: 60px
 }
 
 .review-artist-title{
-   margin-top: 0px
+   margin-top: 0px;
+   margin-left: 60px
 }
 
 .new-review-body{
-    margin-top: 0px
+    margin-top: 0px;
+    margin-left: 60px
 }
 
 .star{

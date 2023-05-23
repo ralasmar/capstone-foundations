@@ -10,7 +10,12 @@ const likesText2 = document.querySelector('#like2')
 const dislikesText2 = document.querySelector('#dislike2')
 const likesText3 = document.querySelector('#like3')
 const dislikesText3 = document.querySelector('#dislike3')
-const searchAlbum = document.querySelector('#searchInput')
+const searchAlbum = document.querySelector('#submit')
+console.log(searchAlbum)
+window.onload = function(){
+    searchAlbum.addEventListener('click', searchDatabase)
+}
+
 
  //profile functions////////////////////////////////////////////////////////
 
@@ -18,7 +23,7 @@ const updateProfilePic = (event) => {
     event.preventDefault()
     let image = document.querySelector('#profileImg')
     image.src = document.getElementById('profileLink').value
-    axios.put("http://localhost:4000/public/myProfile/")
+    axios.put("http://localhost:4000/public/myProfile/", {photo:image.src})
         .then(res => {
             const data = res.data
         })
@@ -183,28 +188,49 @@ getReviews()
 
 
 //database search/////////////////////////////////////////////////////
-const searchDatabase = (input) => {
-    input = document.getElementById('searchInput')
-    axios.get(`http://localhost:4000/search/${input.value}`, (req, res))
+function searchDatabase(){
+    let input = document.getElementById('searchInput')
+    console.log(input.value)
+    axios.get(`http://localhost:4000/public/search/?albums=${input.value}`)
         .then(res => {
             const data = res.data
-             console.log(`${input.value}`)
+            createSearchCard(data[0])
         })
         .catch(err => console.log(err))
 }
+
+function createSearchCard(search){
+    console.log(search)
+    const searchCard = document.createElement('div')
+    searchCard.classList.add('search-card')
+
+    searchCard.innerHTML = `<img alt = 'album cover' src=${search.image} class = "search-album-cover"/>
+    <p class = "search-album-title">${search.album}</p>
+    <p class = "search-artist-title">${search.artist}</p>
+    `
+
+    searchResults.appendChild(searchCard)
+}
+
+function displaySearch(arr){
+    arr.forEach(search => {
+        createSearchCard(search)
+    })
+}
     
-   
+//searchDatabase()
 
 
 
 
 //event listeners
 
-//using window.onload because this event listener executes before the DOM fully loads causing an error
+// using window.onload because this event listener executes before the DOM fully loads causing an error
 window.onload = function(){
     changePicBtn.addEventListener('click', updateProfilePic)
 }
-    
+
+
 followBtn.addEventListener('click', followUser)
 
 likesText.addEventListener('click', likesCounter)
@@ -213,7 +239,13 @@ likesText2.addEventListener('click', likesCounter2)
 dislikesText2.addEventListener('click', dislikesCounter2)
 likesText3.addEventListener('click', likesCounter3)
 dislikesText3.addEventListener('click', dislikesCounter3)
-searchAlbum.addEventListener('click', searchDatabase)
+
+
+
+
+
+
+
 
 
 
