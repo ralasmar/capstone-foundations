@@ -25,8 +25,8 @@ const likesCounter = (event) => {
 };
 
 let dislikes = 0
-const dislikesCounter = (id) => {
-    //event.preventDefault()
+const dislikesCounter = (event) => {
+    event.preventDefault()
     dislikes += 1
     console.log(`dislikes: ${dislikes}`)
     const dislikesCount = document.querySelector('#dislikes')

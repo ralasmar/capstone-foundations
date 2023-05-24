@@ -158,21 +158,30 @@ h4{
 }
 
 .stars{
-    font-size: 50px;
+    font-size: 40px;
     display: flex;
     align-items: center;
-    transition: color 0.2s ease
+    transition: color 0.2s ease;
+    color: grey;
+    border-color: black
 }
 
 .stars span.active{
     color: #ff9c1a
 }
 
+.active {
+    color: #ff9c1a;
+    font-size: 40px;
+    float: right;
+}
+
 #delete-review{
     background-color: red;
     border-color: red;
     border-radius: 8px;
-    float: right;
+    float: left;
+    margin-left: 60px;
     
 }
 
