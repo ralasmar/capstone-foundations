@@ -31,7 +31,6 @@ const postReview = (body) => axios.post('http://localhost:4000/public/myProfile'
     .then(res => {
         console.log(res.data)
         alert('Review Posted!')
-       // displayReviews(res.data)
     })
     .catch(err => console.log(err))
 
