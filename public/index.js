@@ -1,58 +1,8 @@
 //query selectors
 
-
-// const newReviewBtn = document.querySelector("#submitReview")
-
-//const deleteBtn = document.querySelector('#delete-review')
-
 const searchAlbum = document.querySelector('#submit')
 console.log(searchAlbum)
 
-
-
- 
-
-// const getLikes = () => axios.get('http://localhost:4000/profile')
-//     .then(res => {
-//         console.log(res.data)
-//     })
-//     .catch(err => console.log(err))
-
-// const displayLikes = (event) => {
-//     event.preventDefault()
-//     let newLikes = document.querySelector('#likes')
-//     newLikes.innerHTML = ("0", "1")
-
-// } 
-
-
-
-
-// const postReview = (body) => axios.post('http://localhost:4000/public/myProfile', body)
-//     .then(res => {
-//        // displayReviews(res.data)
-//     })
-//     .catch(err => console.log(err))
-
-
-
-// const formHandler = (event) => {
-//     event.preventDefault()
-
-//     let album = document.querySelector('#review-album-title')
-//     let artist = document.querySelector('#review-artist-title')
-//     let imageURL = document.querySelector("#review-album-cover")
-//     let body = document.querySelector('#review-body')
-    
-//     let reviewObj = {
-//         title: album.value,
-//         artist: artist.value,
-//         imageURL: imageURL.value,
-//         body: body.value
-//     }
-//     postReview(reviewObj)
-
-// }
 
 
 
@@ -90,8 +40,5 @@ function displaySearch(arr){
     
 //searchDatabase()
 
-
-//deleteBtn.addEventListener('click', deleteReview)
-//newReviewBtn.addEventListener('click', formHandler)
 
 searchAlbum.addEventListener('click', searchDatabase)

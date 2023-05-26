@@ -70,20 +70,6 @@ const formHandler = (event) => {
 
 }
 
-// function createReviewCard(review) {
-//     const reviewCard = document.createElement('div')
-//     reviewCard.classList.add('review-card')
-
-//     reviewCard.innerHTML = `<img alt = 'album cover' src=${review.imageURL} class = "review-album-cover"/>
-//     <p class = "review-album-title">${review.album}</p>
-//     <p class = "review-artist-title">${review.artist}</p>
-//     <p class = "new-review-body">${review.body}</p>
-    
-//     <button onclick="deleteReview(${id})">Delete</button>
-//     `
-//     reviewSection.appendChild(reviewCard)
-// }
-
 function displayReviews(arr){
     arr.forEach(review => {
         createReviewCard(review)

@@ -26,9 +26,6 @@ app.get('/public/reviews', getReviews)
 app.delete('/public/myProfile/:id', deleteReview)
 app.get('/public/search', searchDatabase)
 app.post('/public/search', postSearch)
-//app.put('/public/profile', displayLikes)
-//app.get('/public/profile', likesCounter)
-//app.get('/public/profile', dislikesCounter)
 
 
 

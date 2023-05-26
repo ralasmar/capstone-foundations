@@ -108,8 +108,4 @@ module.exports = {
         db.push(search)
         res.status(200).send(db)
     }
-    // displayLikes : (req, res) => {
-    //     const {likes} = req.body
-    //     res.status(200).send('likes updated')
-    // }
 }
