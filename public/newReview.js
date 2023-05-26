@@ -34,11 +34,11 @@ const postReview = (body) => axios.post('http://localhost:4000/public/myProfile'
     })
     .catch(err => console.log(err))
 
+    
 let rating
 function handleStars(event){
     rating = event.currentTarget.id
 }
-
 
 
 let starRating = document.querySelectorAll('.stars span')

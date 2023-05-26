@@ -1,10 +1,5 @@
 //query selectors
-
 const searchAlbum = document.querySelector('#submit')
-console.log(searchAlbum)
-
-
-
 
 //database search/////////////////////////////////////////////////////
 function searchDatabase(){
